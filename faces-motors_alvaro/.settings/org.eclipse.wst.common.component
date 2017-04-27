@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="faces-motors_alvaro">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent"/>
+        <property name="java-output-path" value="/faces-motors_alvaro/build/classes"/>
+        <property name="context-root" value="faces-motors_alvaro"/>
+    </wb-module>
+</project-modules>

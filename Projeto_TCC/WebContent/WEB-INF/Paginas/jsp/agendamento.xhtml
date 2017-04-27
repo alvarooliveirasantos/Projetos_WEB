@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html">
+<h:body>
+<h:form>
+Selecione o estacionamento:
+<h:inputText value="#{reservaBean.reserva.estacionamento}"/><br></br>
+Horario de entrada:
+<h:inputText value="#{reservaBean.reserva.horarioEntrada}"/><br/>
+Horario de saida:
+<h:inputText value="#{reservaBean.reserva.horarioEntrada}"/><br/>
+Marca do Veiculo:
+<h:inputText value="#{reservaBean.reserva.marca}"/><br/>
+Modelo:
+<h:inputText value="#{reservaBean.reserva.veiculo}"/><br/>
+Placa:
+<h:inputText value="#{reservaBean.reserva.placa}"/><br/>
+Observacoes:
+<h:inputTextarea value="#{reservaBean.reserva.observacoes}"/><br/>
+
+<h:commandButton value = "Salvar" action="#{reservaBean.salva(reservaBean.reserva)}"/>
+</h:form>
+</h:body>
+</html>
