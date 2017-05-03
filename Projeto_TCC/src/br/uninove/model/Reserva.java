@@ -11,6 +11,7 @@ import javax.persistence.Table;
 public class Reserva {
 	@Id@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int codigo;
+	private String dia;
 	private String estacionamento;
 	private String horarioEntrada;
 	private String horarioSaida;
@@ -18,6 +19,7 @@ public class Reserva {
 	private String marca;
 	private String placa;
 	private String observacoes;
+	private int codigo_usuario;
 	
 	
 	public int getCodigo() {
@@ -26,6 +28,12 @@ public class Reserva {
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
+	public String getDia() {
+		return dia;
+	}
+	public void setDia(String dia) {
+		this.dia = dia;
+	}	
 	public String getEstacionamento() {
 		return estacionamento;
 	}
@@ -67,6 +75,12 @@ public class Reserva {
 	}
 	public void setObservacoes(String observacoes) {
 		this.observacoes = observacoes;
+	}
+	public int getCodigo_usuario() {
+		return codigo_usuario;
+	}
+	public void setCodigo_usuario(int codigo_usuario) {
+		this.codigo_usuario = codigo_usuario;
 	}
 	
 	

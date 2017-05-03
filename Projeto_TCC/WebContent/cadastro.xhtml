@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:p="http://primefaces.org/ui"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head></h:head>
+<h:body><h:form><center>
+<h:panelGrid>
+<p:outputLabel value="Nome de usuario"> </p:outputLabel>
+<p:inputText value="#{usuarioBean.usuario.nome}"></p:inputText>
+<p:outputLabel value="CPF"> </p:outputLabel>
+<p:inputText value="#{usuarioBean.usuario.cpf}"></p:inputText>
+<p:outputLabel value="Senha"> </p:outputLabel>
+<p:inputText value="#{usuarioBean.usuario.senha}"></p:inputText>
+<p:outputLabel value="Telefone"> </p:outputLabel>
+<p:inputText value="#{usuarioBean.usuario.telefone}"></p:inputText>
+<p:commandButton value = "Salvar" actionListener="#{usuarioBean.Salva(usuarioBean.usuario)}"/>
+</h:panelGrid>
+</center></h:form>
+</h:body>
+</html>

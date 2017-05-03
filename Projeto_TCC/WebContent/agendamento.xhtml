@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:p="http://primefaces.org/ui"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+</h:head><h:body><center>
+<h:form><h:panelGrid>
+ <p:outputLabel for="inline" value="Inline:" />
+ <p:calendar id="inline" value="#{reservaBean.reserva.dia}" mode="inline" />
+ <p:outputLabel for="console" value="Selecione o estacionamento:" />
+    <p:selectOneMenu id="console" value="#{reservaBean.reserva.estacionamento}" style="width:125px">
+            <f:selectItem itemLabel="Select One" itemValue="" />
+            <f:selectItem itemLabel="Santo Amaro" itemValue="Santo Amaro" />
+            <f:selectItem itemLabel="Morumbi" itemValue="Morumbi" />
+            <f:selectItem itemLabel="Berrini" itemValue="Berrini" />
+     </p:selectOneMenu>
+<p:outputLabel value="Horario de entrada:" />
+<p:calendar id="inicio" value="#{reservaBean.reserva.horarioEntrada}" pattern="HH:mm" timeOnly="true" /><br/>
+<p:outputLabel value="Horario de saida" />
+<p:calendar id="fim" value="#{reservaBean.reserva.horarioSaida}" pattern="HH:mm" timeOnly="true" /><br/>
+<p:outputLabel value="Marca do veiculo:" />
+<p:inputText value="#{reservaBean.reserva.marca}"/><br/>
+<p:outputLabel value="Modelo" />
+<p:inputText value="#{reservaBean.reserva.veiculo}"/><br/>
+<p:outputLabel value="Placa" />
+<p:inputText value="#{reservaBean.reserva.placa}"/><br/>
+<p:outputLabel value="Observações" />
+<p:inputTextarea value="#{reservaBean.reserva.observacoes}"/><br/>
+<p:commandButton value = "Salvar" actionListener="#{reservaBean.Salva(reservaBean.reserva)}"/>
+</h:panelGrid>
+</h:form></center>
+</h:body>
+</html>

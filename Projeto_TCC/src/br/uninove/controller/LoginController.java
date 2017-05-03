@@ -21,13 +21,12 @@ public class LoginController extends HttpServlet  {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String user = req.getParameter("email");
 		String senha = req.getParameter("senha");	
-		
-			
+					
 		Usuario usuario = new UsuarioDAO().buscaUsuario(user,senha);
 		if (usuario != null){
 		HttpSession session = req.getSession();
 		session.setAttribute("usuario.logado",usuario);	
-		RequestDispatcher dispatcher = req.getRequestDispatcher("WEB-INF/Paginas/jsp/agendamento.xhtml");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("agendamento.xhtml");
 		dispatcher.forward(req, resp);
 		System.out.println();
 		}
@@ -38,7 +37,7 @@ public class LoginController extends HttpServlet  {
 			//String script = "<html><body><script type='text/javascript'>alert('Usuario incorreto');</script></body></html>";
     		//System.out.println(script);
     		out.write("<html><body>script</body></html>");
-    		RequestDispatcher dispatcher = req.getRequestDispatcher("WEB-INF/Paginas/jsp/agendamento.xhtml");
+    		RequestDispatcher dispatcher = req.getRequestDispatcher("agendamento.xhtml");
     		dispatcher.forward(req, resp);	
     		
 			

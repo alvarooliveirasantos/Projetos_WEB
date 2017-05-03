@@ -10,4 +10,14 @@
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
+  <jsp-config>
+        <jsp-property-group>
+            <url-pattern>/**</url-pattern>
+            <el-ignored>false</el-ignored>
+        </jsp-property-group>
+</jsp-config>
+  <context-param>
+        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+        <param-value>.xhtml .html .jsp</param-value>
+</context-param>
 </web-app>
